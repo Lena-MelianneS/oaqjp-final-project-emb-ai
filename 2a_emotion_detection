@@ -1,0 +1,13 @@
+"Importing necessary libraries"
+import requests, response
+
+"Defining Emotion Predict function"
+def emotion_detector(text_to_analyze):
+
+    "Designaating URL, headers and others"
+    
+    url = "https://github.com/Lena-MelianneS/oaqjp-final-project-emb-ai.git"
+    headers = {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"}
+    obj = { "raw_document": { "text": text_to_analyze } }
+    response = request.post(url, json = obj, headers = header )
+    return response.text
