@@ -1,0 +1,45 @@
+import unittest
+from emotion_detection import emotion_detector
+
+class Test_Emotion(unittest.TestCase):
+    #joy
+    def test_emotion_detector(self):
+        emotion = emotion_detector(" I am glad this happened")
+        emotion = list(emotion.values())[5]
+        self.assertEqual(emotion, 'joy')
+        print (f"Correct ! The answer is indeed '{emotion}'")
+
+class Test_Emotion(unittest.TestCase):
+    #anger
+    def test_emotion_detector(self):
+        emotion = emotion_detector(" I am really mad about this")
+        emotion = list(emotion.values())[5]
+        self.assertEqual(emotion, 'anger')
+        print (f"Correct ! The answer is indeed '{emotion}'")
+
+class Test_Emotion(unittest.TestCase):
+    #disgust
+    def test_emotion_detector(self):
+        emotion = emotion_detector(" I feel disgusted just hearing about this")
+        emotion = list(emotion.values())[5]
+        self.assertEqual(emotion, 'disgust')
+        print (f"Correct ! The answer is indeed '{emotion}'")
+class Test_Emotion(unittest.TestCase):
+    #sadness
+    def test_emotion_detector(self):
+        emotion = emotion_detector(" I am so sad about this")
+        emotion = list(emotion.values())[5]
+        self.assertEqual(emotion, 'sadness')
+        print (f"Correct ! The answer is indeed '{emotion}'")
+    
+class Test_Emotion(unittest.TestCase):
+    #fear
+    def test_emotion_detector(self):
+        emotion = emotion_detector(" I am really afraid that this will happen ")
+        emotion = list(emotion.values())[5]
+        self.assertEqual(emotion, 'fear')
+        print (f"Correct ! The answer is indeed '{emotion}'")
+
+
+if __name__ == "__main__":
+    unittest.main()
